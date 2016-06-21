@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no,adress=no" name="format-detection">
+    <meta content="fullscreen=yes,preventMove=no" name="ML-Config">
+    <meta name="author" content="G.fan">
+    <meta name="copyright" content="脸脸，LianLian Hui Tech. Co. Ltd.">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" type="text/css" href="../assets/scss/style.css">
+    <link rel="prefetch" href="">
+    <title>练习</title>
+    <style>
+        html, body{
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            position: relative;
+            z-index: 1;
+            background-color: #fff;
+        }
+        #adam {
+  background: url(https://www.adamkhoury.com/demo/sprite_sheets/adam.png);
+  width: 120px;
+  height: 180px;
+  -webkit-animation: walk-east 1.0s steps(8) infinite;
+  animation: walk-east 1.0s steps(8) infinite;
+}
+@-webkit-keyframes walk-east {
+  from {
+    background-position: 0px;
+  }
+  to {
+    background-position: -960px;
+  }
+}
+@keyframes walk-east {
+  from {
+    background-position: 0px;
+  }
+  to {
+    background-position: -960px;
+  }
+}
+    </style>
+    </head>
+    <body>
+       <div id="adam"></div>
+    </body>
+</html>
