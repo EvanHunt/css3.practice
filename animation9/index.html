@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no,adress=no" name="format-detection">
+    <meta content="fullscreen=yes,preventMove=no" name="ML-Config">
+    <meta name="author" content="G.fan">
+    <meta name="copyright" content="脸脸，LianLian Hui Tech. Co. Ltd.">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" type="text/css" href="../assets/scss/style.css">
+    <link rel="prefetch" href="">
+    <title>练习</title>
+    <style>
+        .box {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: teal;
+            position: absolute;
+            z-index: 1;
+            left: 30%;
+            top: 30%;
+            animation-name: rotate;
+            animation-duration: 4s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;    
+        }
+        @keyframes rotate {
+            0% {
+                transform:translate(100px, 100px) rotate(0deg) translate(-100px, -100px);
+                background-color:red;
+            }  
+            13% {
+                transform:translate(100px, 100px) rotate(45deg) translate(-100px, -100px);
+            }
+            25% {
+                transform:translate(100px, 100px) rotate(90deg) translate(-100px, -100px);
+            }
+            38% {
+                transform:translate(100px, 100px) rotate(135deg) translate(-100px, -100px);
+            }
+            50% {
+                transform:translate(100px, 100px) rotate(180deg) translate(-100px, -100px);
+            }
+            63% {
+                transform:translate(100px, 100px) rotate(225deg) translate(-100px, -100px);
+            }
+            75% {
+                transform:translate(100px, 100px) rotate(270deg) translate(-100px, -100px);
+            }
+            88% {
+                transform:translate(100px, 100px) rotate(315deg) translate(-100px, -100px);
+            }
+            100% {
+                transform:translate(100px, 100px) rotate(360deg) translate(-100px, -100px);
+            }
+        }
+    </style>
+    </head>
+    <body>
+        <h3>Pure Javascript</h3>
+        <div class='box'></div> 
+        <button class='toggleButton' value='play'>play</button>
+        <script>
+             var play = document.querySelector('.toggleButton');
+             var box = document.querySelector('.box');
+             play.addEventListener('click', function () {
+
+             }, false)
+        </script>
+    </body>
+</html>
