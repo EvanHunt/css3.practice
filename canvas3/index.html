@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no,adress=no" name="format-detection">
+    <meta content="fullscreen=yes,preventMove=no" name="ML-Config">
+    <meta name="author" content="G.fan">
+    <meta name="copyright" content="脸脸，LianLian Hui Tech. Co. Ltd.">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" type="text/css" href="../assets/scss/style.css">
+    <link rel="prefetch" href="">
+    <title>练习</title>
+    <style>
+        .color{
+            width: 200px;
+            height: 100px;
+        }
+    </style>
+    </head>
+    <body>
+        <img src="" alt="">    
+        <canvas id="foo"></canvas>
+        <div id="color"></div>
+        <script>
+
+            var foo = document.querySelector('#foo')
+            var color = document.querySelector('#color')
+            var ctx = foo.getContext('2d')
+            var raf
+
+            var width = 500
+            var height = 500
+
+            foo.width = width
+            foo.height = height
+
+            var img = new Image()
+            img.src= '1.png'
+            img.onload = function () {
+                ctx.drawImage(img, 0, 0, width, height)
+                img.style.display = 'none'
+            }
+
+            function pick(event) {
+                var x = event.layerX
+                var y = event.layerY
+                var pixel = ctx.getImageData(x, y, 1, 1)
+                var data = pixel.data
+                console.log(data)
+                var rgba = 'rgba(' + data[0] + ',' + data[1] + ',' + data[2] + ',' + data[3] + ')'
+                color.style.background = rgba
+                color.textContent = rgba
+            }
+
+            foo.addEventListener('mousemove', pick)
+
+        </script>
+    </body>
+</html>
